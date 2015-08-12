@@ -1,0 +1,2 @@
+dormvip = angular.module('dormvip', [ 
+])
