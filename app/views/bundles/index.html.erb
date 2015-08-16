@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="panel body">
+    <form class="form-inline">
+      <% if @bundles.any? %>
+        <% @bundles.each do |bundle| %>
+          <%= bundle.title %>
+        <% end %>
+      <% end %>
+    </form>
+  </div>
+</div>

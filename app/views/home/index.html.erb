@@ -12,3 +12,15 @@
     </div>
   </div>
 </div>
+
+
+
+<div class="container-fluid">
+  <div class="panel body">
+    <% if @bundles.any? %>
+      <% @bundles.each do |bundle| %>
+        <%=  bundle.title %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
