@@ -13,7 +13,7 @@
   </div>
 </div>
 
-<%= link_to 'Create your bundle now!', 'bundles#new' %>
+<%= link_to 'Create your bundle now!', 'bundles/new' %>
 
 <div class="container-fluid">
   <div class="panel body">
@@ -24,8 +24,9 @@
 
 
         <% if bundle.products.any? %>
-          <% bundle.products.each do |product| %>
-            <%= product.title %>
+          <ul><% bundle.products.each do |product| %> 
+            <li> <%= product.title %> </li>
+          </ul>
           <% end %>
         <% end %>
 

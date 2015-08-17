@@ -3,6 +3,8 @@ class BundlesController < ApplicationController
   
 
   def new
+    @bundle_types = ['Single Item', '3 items']
+    @product_options = Product.all.map{|p| [p.title, p.id]}
     @bundle = Bundle.new
     @bundle.products.build
   end
@@ -44,7 +46,7 @@ class BundlesController < ApplicationController
   end
 
   def bundle_params
-    params.require(:bundle).permit(:title, :description, :poster_image_url, :total_price, :code, :number_of_products, products_attributes: [ :id, :name, :_destroy ])
+    params.require(:bundle).permit(:title, :description, :poster_image_url, :total_price, :code, :number_of_products, products_attributes: [ :id, :title, :_destroy ])
   end
 
 end

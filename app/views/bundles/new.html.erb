@@ -2,14 +2,22 @@
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
+    <%= f.label :type %><br/ >
+    <%= f.select :type, @bundle_types %>
   </div>
    
    <h2>Products </h2>
    <%= f.fields_for :products do |product| %>
     <div class="field">
+      
       <%= product.label :title %><br>
-      <%= product.text_field :title %>
-      <%= product.check_box :_destroy %>
+      
+      <% @product_options.each do |p_o| %>
+        <%= product.radio_button :title, p_o %> <br/ >
+        <%= p_o %> <br/ >
+      <%end%>
+      
+      <%= product.check_box :_destroy %><br/ >
       <%= product.label :_destroy, 'remove' %>
     </div>
   <% end %>
@@ -17,6 +25,7 @@
     <%= f.submit %>
   </div>
 <% end %>
+
 
 
 # admin panel
