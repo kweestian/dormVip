@@ -19,7 +19,7 @@ gem 'jquery-rails'
 
 gem 'bower-rails'
 
-gem 'bootstrap-sass', '~> 3.3.5'
+gem 'bootstrap-sass'
 
 gem 'foreman'
 

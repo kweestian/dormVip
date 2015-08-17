@@ -1,17 +1,22 @@
-<div class="field">
-2  <%= f.label :title %><br>
-3  <%= f.text_field :title %>
-4 </div>
-5 
-6 <h2>Room Categories</h2>
-7 <%= f.fields_for :products do |room_category| %>
-8  <div class="room_category_fields">
-9  <div class="field">
-  <%= room_category.label :title %><br>
-  <%= room_category.text_field :title %>
+<%= form_for @bundle do |f| %>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
   </div>
+   
+   <h2>Products </h2>
+   <%= f.fields_for :products do |product| %>
+    <div class="field">
+      <%= product.label :title %><br>
+      <%= product.text_field :title %>
+      <%= product.check_box :_destroy %>
+      <%= product.label :_destroy, 'remove' %>
+    </div>
+  <% end %>
+  <div class="btn btn-submit">
+    <%= f.submit %>
   </div>
- <% end %>
+<% end %>
 
 
 # admin panel

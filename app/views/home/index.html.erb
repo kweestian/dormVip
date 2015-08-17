@@ -13,13 +13,22 @@
   </div>
 </div>
 
-
+<%= link_to 'Create your bundle now!', 'bundles#new' %>
 
 <div class="container-fluid">
   <div class="panel body">
     <% if @bundles.any? %>
       <% @bundles.each do |bundle| %>
-        <%=  bundle.title %>
+        <h2><%=  bundle.title %></h2><br/>
+        <%= bundle.number_of_products? ? bundle.number_of_products : 0 %><br/>
+
+
+        <% if bundle.products.any? %>
+          <% bundle.products.each do |product| %>
+            <%= product.title %>
+          <% end %>
+        <% end %>
+
       <% end %>
     <% end %>
   </div>
