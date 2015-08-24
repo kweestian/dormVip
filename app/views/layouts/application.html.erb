@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
+
   <title>DormVip</title>
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
 
-<%= render "navbar" %>
+<%= render partial: '/layouts/navbar' %>
 </head>
 <body>
   <%= yield %>

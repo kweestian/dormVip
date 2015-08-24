@@ -1,0 +1,19 @@
+.navbar.navbar-container {
+  background-color: #282E36;
+  border-radius: 0px;
+}
+
+.navbar-container__logo {
+  height: 100px;
+  display: inline-block;
+}
+
+.navbar-container__logo--image {
+  position: relative;
+  height: 100%;
+}
+
+.navbar-container__login {
+  position: relative;
+  color: white;
+}
