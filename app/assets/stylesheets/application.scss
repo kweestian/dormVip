@@ -14,9 +14,11 @@
  *= require_self
  */
 
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap-sprockets";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap";
 
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "css/bootstrap.css";
 @import "bundles.scss";
 @import "home.scss";
 @import "products.scss";
+@import "css/animate.min.css";
+@import "css/creative.css";

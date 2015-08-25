@@ -1,11 +1,9 @@
-.navbar.navbar-container {
-  background-color: #282E36;
-  border-radius: 0px;
+.navbar__image {
+  height: 73px;
 }
 
-.navbar-container__logo {
-  height: 100px;
-  display: inline-block;
+#mainNav {
+  background-color: transparent;
 }
 
 .navbar-container__logo--image {
@@ -17,3 +15,5 @@
   position: relative;
   color: white;
 }
+
+// 282E36

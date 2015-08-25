@@ -2,6 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  background: image-url('dormVipLogoColor.png'); 
+// body {
+//   background: image-url('dormVipLogoColor.png'); 
+// }
+
+
+#landingTitle {
+  font-family: "gotham-rounded";
 }
+
+#header {
+  background: url(image_path("background.jpg")) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+

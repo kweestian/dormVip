@@ -1,38 +1,7 @@
 
-
-<%= link_to 'Create your bundle now!', 'bundles/new' %>
-
-<div class="container-fluid">
-  <div class="panel body">
-    <% if @bundles.any? %>
-      <% @bundles.each do |bundle| %>
-        <h2><%=  bundle.title %></h2><br/>
-        <%= bundle.number_of_products? ? bundle.number_of_products : 0 %><br/>
-
-
-        <% if bundle.products.any? %>
-          <ul><% bundle.products.each do |product| %>
-            <li> <%= product.title %> </li>
-          </ul>
-          <% end %>
-        <% end %>
-
-      <% end %>
-    <% end %>
-  </div>
+<div id="bundle__header">
+  <%= link_to 'Create your bundle now!', 'bundles/new' %>
 </div>
 
-<div class="container-fluid" ng-app="dormvip">
-  <div class="panel panel-success">
-    <div class="panel-heading">
-      <h1 ng-if="name">Hello, {{name}}</h1>
-    </div>
-    <div class="panel-body">
-      <form class="form-inline">
-        <div class="form-group">
-          <input class="form-control" type="text" placeholder="Enter your name" autofocus ng-model="name">
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
+
+
