@@ -12,13 +12,14 @@
  *
  *= require_tree .
  *= require_self
+ *= require css/bootstrap
  */
 
 
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap";
-@import "css/bootstrap.css";
-@import "bundles.scss";
-@import "home.scss";
-@import "products.scss";
-@import "css/animate.min.css";
-@import "css/creative.css";
+  @import "bootstrap-sass-official/assets/stylesheets/bootstrap";
+  @import "css/bootstrap.css";
+  @import "bundles.scss";
+  @import "home.scss";
+  @import "products.scss";
+  @import "css/animate.min.css";
+  @import "css/creative.css";
