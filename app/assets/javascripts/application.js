@@ -10,14 +10,15 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require js/wow.min
 //= require js/jquery
 //= require jquery_ujs
 //= require angular/angular
 //= require_tree .
 //= require js/bootstrap.min
 //= require js/jquery.easing.min
-//= require js/jquery.fittext
-//= require js/creative
-//= require js/cbpAnimatedHeader
 //= require js/classie
-//= require js/wow.min
+//= require js/jquery.fittext
+//= require js/cbpAnimatedHeader
+//= require js/creative
+

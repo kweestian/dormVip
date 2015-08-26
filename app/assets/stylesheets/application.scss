@@ -15,11 +15,10 @@
  *= require css/bootstrap
  */
 
-
+  @import "css/animate.min";
   @import "bootstrap-sass-official/assets/stylesheets/bootstrap";
-  @import "css/bootstrap.css";
+  @import "css/bootstrap";
   @import "bundles.scss";
   @import "home.scss";
   @import "products.scss";
-  @import "css/animate.min.css";
-  @import "css/creative.css";
+  @import "css/creative";
