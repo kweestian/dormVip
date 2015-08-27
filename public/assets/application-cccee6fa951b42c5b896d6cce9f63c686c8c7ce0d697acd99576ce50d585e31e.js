@@ -29070,7 +29070,6 @@ var cbpAnimatedHeader = (function() {
 		header = document.querySelector( '.navbar-default' ),
 		didScroll = false,
 		changeHeaderOn = 300;
-		console.log(header);
 
 	function init() {
 		window.addEventListener( 'scroll', function( event ) {
@@ -29085,7 +29084,7 @@ var cbpAnimatedHeader = (function() {
 		var sy = scrollY();
 		if ( sy >= changeHeaderOn ) {
 			classie.add( header, 'navbar-shrink' );
-			console.log(header);
+
 		}
 		else {
 			classie.remove( header, 'navbar-shrink' );
