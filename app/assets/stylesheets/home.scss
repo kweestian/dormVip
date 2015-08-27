@@ -6,6 +6,16 @@
 //   background: image-url('dormVipLogoColor.png'); 
 // }
 
+// globals
+
+.text {
+  color: black;
+}
+
+
+//
+
+
 
 #landingTitle {
   font-family: "gotham-rounded";
@@ -17,5 +27,14 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.need-container {
+  background-color: #333333;
+}
+
+.need-container__title {
+  color: white;
+  font-weight: 300;
 }
 
