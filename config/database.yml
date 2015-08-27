@@ -83,3 +83,4 @@ production:
   database: warm-plateau-5783 DATABASE
   username: dpixcurwilamox
   password: XC8ltfZPK151ANwLVaLjY3csPJ
+  url: postgres://dpixcurwilamox:XC8ltfZPK151ANwLVaLjY3csPJ@ec2-54-204-3-200.compute-1.amazonaws.com:5432/d18hvp0ja76dr1
