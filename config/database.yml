@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: dormvip_prod
-  username: dormVip
-  password: <%= ENV['abc123'] %>
+  database: warm-plateau-5783 DATABASE
+  username: dpixcurwilamox
+  password: XC8ltfZPK151ANwLVaLjY3csPJ
