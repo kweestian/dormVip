@@ -17,9 +17,6 @@
 
 
 
-#landingTitle {
-  font-family: "gotham-rounded";
-}
 
 #header {
   background: url(image_path("background.jpg")) no-repeat center center fixed;
@@ -44,9 +41,12 @@
 }
 
 .header__tagline-text {
-  margin-top: 94px;
+  margin-top: 50px;
 }
 
 .navbar__link {
   text-transform: capitalize;
+}
+.header__title {
+  width: 50%;
 }

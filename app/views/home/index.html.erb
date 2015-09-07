@@ -3,8 +3,7 @@
     <header id="header">
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="header-content-inner--pull-down"> Dorm<span id="vip">Vip</span></h1>
-                <hr>
+                <%= image_tag("DORMVIP-trans.png", class: "header__title") %>
                 <div class="header__tagline">Free. Your. Time.</div>
                 <p class="header__tagline-text"> Laundry and snacks hand-delivered to your door </p>
                 <a href="users/new" class="btn btn-default btn-xl"> Get Started! </a>
@@ -35,222 +34,33 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">My Journey</h2>
-                    <h3 class="section-subheading text-muted">Where I came from and where I am going</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/childchris.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>pre-2010</h4>
-                                    <h4 class="subheading">My Humble Beginnings</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted-main"> Born to a Canadian father and German mother in the United-States, I've always been a curious mind. I lost myself in legos and pre-teen sci-fi/fantasy novels as a child. We moved often, when I was 14 I had to learn english while attending an english speaking high-school; I find this experience quite relatable to learning code and perhaps I am most comfortable in uncomfortable situations because of this </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/legotree.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2010-2012</h4>
-                                    <h4 class="subheading">Initial Path</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted-main">Like many young people of my generation, I wanted to be my own boss and start a buisness; thus I commenced a Bachelor of Commerce at the University of Victoria. At some point during that journey I realized I wanted to to something more technical ... something more like building legos.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/chrisnuna.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>September 2012</h4>
-                                    <h4 class="subheading">First Veer</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted-main">While working on a mineral exploration camp in nunavut, I was exposed to geology! There was something about going on a camping trip/treasure hunt while getting paid that really appealed to me. I embarked on an academic journey that September to complete a combined degree of Geology and Chemistry.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>Summer 2014</h4>
-                                    <h4 class="subheading">Phase Two Veer</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted-main">The more I learned about mineral exploitation, the more I leaned towards enovironmental stewardship. I put my eyes on a environmental geochemistry Masters program at McGill while exploring different aspects of envorimentally sustainable mining. One of those aspects was <a href="http://en.wikipedia.org/wiki/Phytoremediation">phyto-remediation</a>. While doing an internership in a forest genetics lab at the UBC Forestry department, someone showed me how to solve very complex genomics problems using one or two line of Python. That was the ah-ha moment that set everything into motion.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>Present</h4>
-                                    <h4 class="subheading">Final Veer</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted-main">I decided to take some time out of my degree to work on my professional development. I joined Lighthouse Labs in October of 2014 to complement my current skillset with some coding skills. My mission is to use web tools to bring together every day citizens with the expert scientific community. I want to make apps that makes abiding to legal envorimental standards easy, efficient and rewarding for the companies meeting them. Most immediatly, I want to grow my current skills while contributing to your project! </p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                               <a href="#team" class="page-scroll"> <h4>Be Part
-                                    <br>Of My
-                                    <br>Story!</h4></a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
                         <h3>Choose a package </h3>
                         <p class="text-muted">Stay clean for a month, a semester, or all year long </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                        <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".1s"></i>
                         <h3>Customize Your Order</h3>
                         <p class="text-muted">Choose from our <span> unbeleivable selection </span> of snacks, drinks and essentials </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".2s"></i>
                         <h3>We pick up your laundry</h3>
                         <p class="text-muted">If you sign up your friends, we'll take their money too!</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
                         <h3>We drop off your laundry</h3>
                         <p class="text-muted">Freshly cleaned and folded</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="no-padding" id="portfolio">
-        <div class="container-fluid">
-            <div class="row no-gutter">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <%= link_to image_tag("portfolio/1.jpg", class: "img-responsive"), "#"%>
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <%= link_to image_tag("portfolio/2.jpg", class: "img-responsive"), "#"%>
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <%= link_to image_tag("portfolio/3.jpg", class: "img-responsive"), "#"%>
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <%= link_to image_tag("portfolio/4.jpg", class: "img-responsive"), "#"%>
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <%= link_to image_tag("portfolio/5.jpg", class: "img-responsive"), "#"%>
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <%= link_to image_tag("portfolio/6.jpg", class: "img-responsive"), "#"%>
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
                 </div>
             </div>
         </div>
