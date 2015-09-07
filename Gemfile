@@ -23,7 +23,7 @@ gem 'bootstrap-sass'
 
 gem 'foreman'
 
-gem 'font-awesome-sass', '~> 4.4.0'
+gem 'font-awesome-rails'
 
 group :production do
   gem 'rails_12factor'
