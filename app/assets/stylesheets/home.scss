@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 // body {
-//   background: image-url('dormVipLogoColor.png'); 
+//   background: image-url('dormVipLogoColor.png');
 // }
 
 // globals
@@ -17,16 +17,18 @@
 
 
 
-#landingTitle {
-  font-family: "gotham-rounded";
-}
 
 #header {
-  background: url(image_path("background.jpg")) no-repeat center center fixed; 
+  background: url(image_path("background.jpg")) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.header__tagline {
+  font-size: 50px;
+  font-weight: 100;
 }
 
 .need-container {
@@ -38,3 +40,13 @@
   font-weight: 300;
 }
 
+.header__tagline-text {
+  margin-top: 50px;
+}
+
+.navbar__link {
+  text-transform: capitalize;
+}
+.header__title {
+  width: 50%;
+}

@@ -23,6 +23,8 @@ gem 'bootstrap-sass'
 
 gem 'foreman'
 
+gem 'font-awesome-sass', '~> 4.4.0'
+
 group :production do
   gem 'rails_12factor'
   gem 'rails_stdout_logging'

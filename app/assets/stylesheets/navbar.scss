@@ -1,10 +1,17 @@
+.affix {
+  background-color: #222 !important;
+  color: white;
+}
+
 .navbar__image {
   width: 15%;
 }
 
-.navbar__link {
-  font-family: "Gotham Rounded";
-  font-weight: 100;
+#navbar__link {
+  font-family: "Dorm-font";
+  font-weight: 300;
+  text-transform: capitalize;
+  font-size: 24px;
 }
 
 #mainNav {
