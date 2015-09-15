@@ -130,30 +130,17 @@
       </div>
     </aside>
 
-    <section id="contact">
+    <div class="footer" id="contact">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
-                    <hr class="primary">
-                        <div class="field">
-
-                        </div>
-                        <div class="btn btn-submit">
-
-                        </div>
-
-                    <p>Stay in the loop sign up for the  <%= link_to "newsleter", new_user_path %></p>
-                </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                    <p>123-456-6789</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="mailto:your-email@your-domain.com">@dormvip.com</a></p>
-                </div>
+              <div class="col-sm-6 copyright">
+                Copyright <%= fa_icon "copyright" %> 2015 DormVip designed by <a href="https://github.com/kweestian"> Christian Hamelin <%= fa_icon "github" %> </a>
+              </div>
+              <div class="col-sm-6 icon-row">
+                <a href="mailto:max@dormvip.com"> <%= fa_icon "envelope-o 2x", class:  "wow bounceIn bottom-logo" %> <a/>
+                <a href="https://www.instagram.com/dormvip"> <%= fa_icon "instagram 2x", class: "bottom-logo" %> </a>
+                <a href="https://www.facebook.com/dormvip"> <%= fa_icon "facebook-official 2x", class: "bottom-logo" %> </a>
+              </div>
             </div>
         </div>
-    </section>
+    </div>
