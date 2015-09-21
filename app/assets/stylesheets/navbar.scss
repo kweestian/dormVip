@@ -1,17 +1,21 @@
 .affix {
   background-color: #222 !important;
-  color: white;
+}
+
+.affix-top {
+  border: none;
 }
 
 .navbar__image {
-  width: 15%;
+  width: 35%;
 }
 
 #navbar__link {
-  font-family: "Dorm-font";
+  // font-family: "Dorm-font";
   font-weight: 300;
   text-transform: capitalize;
   font-size: 24px;
+  color: #f05f40;
 }
 
 #mainNav {
@@ -36,6 +40,15 @@
 
 #vip {
   font-weight: 300;
+}
+
+.icon__row--nav {
+  margin-right: 20px;
+}
+
+.top-logo {
+  color: white;
+  margin-left: 20px;
 }
 
 // 282E36
