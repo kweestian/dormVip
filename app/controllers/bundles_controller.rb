@@ -1,9 +1,9 @@
 class BundlesController < ApplicationController
   before_filter :set_bundle, :only => [:show, :edit, :update, :destroy]
-  
+
 
   def new
-    @bundle_types = ['Single Item', '3 items']
+    @bundle_types = ['Monthly', 'Yearly', 'Annually']
     @product_options = Product.all.map{|p| [p.title, p.id]}
     @bundle = Bundle.new
     @bundle.products.build
@@ -39,7 +39,7 @@ class BundlesController < ApplicationController
     @bundle.destroy
   end
 
-  protected 
+  protected
 
   def set_bundle
     @bundle = Bundle.find(params[:id])

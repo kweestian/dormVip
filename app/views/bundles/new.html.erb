@@ -1,31 +1,49 @@
-<%= form_for @bundle do |f| %>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-    <%= f.label :type %><br/ >
-    <%= f.select :type, @bundle_types %>
-  </div>
-   
-   <h2>Products </h2>
-   <%= f.fields_for :products do |product| %>
-    <div class="field">
-      
-      <%= product.label :title %><br>
-      
-      <% @product_options.each do |p_o| %>
-        <%= product.radio_button :title, p_o %> <br/ >
-        <%= p_o %> <br/ >
-      <%end%>
-      
-      <%= product.check_box :_destroy %><br/ >
-      <%= product.label :_destroy, 'remove' %>
+<div class="container-full">
+  <%= form_for @bundle do |f| %>
+    <% if @bundle.errors.any? %>
+      <div id="error_explanation">
+        <h2> <%= pluralize(@bundle.errors.count, "error") %> prohibited this bundle from being saved:</h2>
+
+        <ul>
+        <% @bundle.errors.full_messages.each do |message| %>
+          <li> <%= message %> </li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="row">
+      <div class="col-lg-12 text-center v-center">
+        <h1 class="user__form--low">Create your Bundle</h1>
+        <p class="lead">Enter for a chance to win free laundry for a year</p>
+
+        <br><br><br>
+
+        <div class="col-lg-12">
+          <div class="input-group" style="width:340px;text-align:center;margin:0 auto;">
+            <%= f.label :type %><br/ >
+            <%= f.select :type, @bundle_types %>
+          </div>
+        </div>
+
+        <div class="col-lg-12">
+          <div class="input group" style="width:340px;text-align:center;margin:0 auto;">
+           <h2>Products </h2>
+            <%= f.fields_for :products do |product| %>
+              <%= product.label :title %><br>
+
+              <% @product_options.each do |p_o| %>
+                <%= product.select :title, @product_options, prompt: "Please Choose a product"%> <br/ >
+              <% end %>
+            <% end %>
+
+            <div class="btn btn-submit">
+              <%= f.submit %>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
   <% end %>
-  <div class="btn btn-submit">
-    <%= f.submit %>
-  </div>
-<% end %>
-
-
-
-# admin panel
+</div>
