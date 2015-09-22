@@ -31,8 +31,19 @@
   font-weight: 100;
 }
 
+#notice {
+  margin-top: 100px;
+  position: relative;
+  background-color: transparent;
+}
+
 .need-container {
   background-color: #333333;
+}
+
+.successful-email {
+  margin-bottom: 5px;
+  background-color: green;
 }
 
 .need-container__title {
@@ -52,45 +63,9 @@
 }
 
 
-.price-box__header--feature {
-  background-color: #e74c3c;
-  font-size: 30px;
-  line-height: 60px;
-  border-top-left-radius: 36px;
-  border-top-right-radius: 36px;
-}
 
-.price-box__body-price--feature {
-  background-color: #c0392b;
-  font-size: 40px;
-  line-height: 80px;
-
-}
-
-.price-box__body-item--feature {
-  background-color: white;
-  color: #7f8c8d;
-  font-size: 25px;
-  line-height: 60px;
-
-}
-.price-box__body-frequency--feature {
-  background-color: #f5f7f7;
-  color: #7f8c8d;
-  font-size: 25px;
-  line-height: 60px;
-
-}
-
-.price-box__call-to-action--feature {
-  background-color: #e74c3c;
-  height: 100px;
-  padding: 24px;
-  border-bottom-left-radius: 36px;
-  border-bottom-right-radius: 36px;
-}
 .price-box__header {
-  background-color: #1abc9c;
+  background-color: #f05f40;
   font-size: 30px;
   line-height: 60px;
   border-top-left-radius: 36px;
@@ -98,7 +73,7 @@
 }
 
 .price-box__body-price {
-  background-color: #16a085;
+  background-color: #e74c3c;
   font-size: 40px;
   line-height: 80px;
 
@@ -120,12 +95,49 @@
 }
 
 .price-box__call-to-action {
-  background-color: #1abc9c;
+  background-color: #f05f40;
   height: 100px;
   padding: 24px;
   border-bottom-left-radius: 36px;
   border-bottom-right-radius: 36px;
 }
+// .price-box__header {
+//   background-color: #1abc9c;
+//   font-size: 30px;
+//   line-height: 60px;
+//   border-top-left-radius: 36px;
+//   border-top-right-radius: 36px;
+// }
+//
+// .price-box__body-price {
+//   background-color: #16a085;
+//   font-size: 40px;
+//   line-height: 80px;
+//
+// }
+//
+// .price-box__body-item {
+//   background-color: white;
+//   color: #7f8c8d;
+//   font-size: 25px;
+//   line-height: 60px;
+//
+// }
+// .price-box__body-frequency {
+//   background-color: #f5f7f7;
+//   color: #7f8c8d;
+//   font-size: 25px;
+//   line-height: 60px;
+//
+// }
+//
+// .price-box__call-to-action {
+//   background-color: #1abc9c;
+//   height: 100px;
+//   padding: 24px;
+//   border-bottom-left-radius: 36px;
+//   border-bottom-right-radius: 36px;
+// }
 
 .footer {
   background-color: #34495e;

@@ -1,19 +1,19 @@
 <div class="container-full ">
-  <%= form_for(@user) do |f|%>
-    <% if @user.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  <div class="row">
 
-        <ul>
-        <% @user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
-      <div class="row">
+    <div class="col-lg-12 text-center v-center">
+    <%= form_for(@user) do |f|%>
+      <% if @user.errors.any? %>
+        <div class="error-box">
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-        <div class="col-lg-12 text-center v-center">
+          <% @user.errors.full_messages.each do |message| %>
+            <%= message %>
+          <% end %>
+
+        </div>
+      <% end %>
+
 
           <h1 class="user__form--low">Talk Soon</h1>
           <p class="lead">Enter for a chance to win free laundry for a year</p>
@@ -22,8 +22,10 @@
 
           <div class="col-lg-12">
             <div class="input-group" style="width:340px;text-align:center;margin:0 auto;">
-              <%= f.text_field :email, class: "form-control input-lg", placeholder: "Enter your email address" %>
-                <span class="input-group-btn"><%= f.submit "ok", class: "btn btn-lg btn-primary" %> </span>
+              <%= f.text_field :first_name, class: "form-control input-lg", placeholder: "First Name", id: "top-field" %>
+              <%= f.text_field :last_name, class: "form-control input-lg", placeholder: "Last Name" %>
+              <%= f.text_field :email, class: "form-control input-lg", placeholder: "Enter your email address", id: "bottom-field" %>
+                <span class="input-group-btn"><%= f.submit "ok", class: "btn btn-lg btn-primary user__button" %> </span>
             </div>
           </div>
         </div>

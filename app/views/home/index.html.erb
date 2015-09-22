@@ -1,15 +1,18 @@
     <%= render partial: "home/navbar" %>
-
     <header id="header">
         <div class="header-content">
+          <div class="color-success successful-email"><%= notice %></div>
             <div class="header-content-inner">
                 <%= image_tag("DORMVIP-trans.png", class: "header__title") %>
+
                 <div class="header__tagline">Free. Your. Time.</div>
                 <p class="header__tagline-text"> Laundry and snacks hand-delivered to your door </p>
                 <a href="users/new" class="btn btn-default btn-xl"> Get Started! </a>
             </div>
         </div>
     </header>
+
+
 
     <section class="need-container" id="about">
         <div class="container">
@@ -89,19 +92,19 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="price-box__header--feature">
+            <div class="price-box__header">
               Semester
             </div>
-            <div class="price-box__body-price--feature">
+            <div class="price-box__body-price">
               $00.00
             </div>
-            <div class="price-box__body-item--feature">
+            <div class="price-box__body-item">
               Laundry + 3 items
             </div>
-            <div class="price-box__body-frequency--feature">
+            <div class="price-box__body-frequency">
             Frequency
             </div>
-            <div class="price-box__call-to-action--feature">
+            <div class="price-box__call-to-action">
               <div class="btn btn-default btn-xl wow tada">
                 I Want !
               </div>

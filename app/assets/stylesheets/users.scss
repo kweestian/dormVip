@@ -18,3 +18,20 @@
 .user__form--low {
   margin-top: 300px
 }
+
+.user__button {
+  height: 115%;
+}
+
+#top-field {
+  border-bottom-left-radius: 0;
+}
+
+
+#bottom-field {
+  border-bottom-left-radius: 5px;
+}
+
+.error-box {
+  background-color: red;
+}
