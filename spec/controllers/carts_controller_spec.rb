@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe ProductsController do
+describe CartsController do
 
-  describe "GET 'index'" do
+  describe "GET 'show'" do
     it "returns http success" do
-      get 'index'
+      get 'show'
       response.should be_success
     end
   end

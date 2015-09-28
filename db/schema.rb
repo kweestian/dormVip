@@ -11,34 +11,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150922013825) do
+ActiveRecord::Schema.define(version: 20150927230056) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "bundles", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
-    t.string   "poster_image_url"
-    t.integer  "total_price"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.integer  "number_of_products"
-    t.string   "type"
+  create_table "order_items", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "order_id"
+    t.decimal  "unit_price",  precision: 12, scale: 3
+    t.integer  "quantity"
+    t.decimal  "total_price", precision: 12, scale: 3
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+  end
+
+  add_index "order_items", ["order_id"], name: "index_order_items_on_order_id", using: :btree
+  add_index "order_items", ["product_id"], name: "index_order_items_on_product_id", using: :btree
+
+  create_table "orders", force: :cascade do |t|
+    t.decimal  "subtotal",   precision: 12, scale: 3
+    t.decimal  "tax",        precision: 12, scale: 3
+    t.decimal  "shipping",   precision: 12, scale: 3
+    t.decimal  "total",      precision: 12, scale: 3
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   create_table "products", force: :cascade do |t|
-    t.string   "title"
-    t.integer  "price"
-    t.integer  "bundle_id"
+    t.string   "name"
+    t.decimal  "price",       precision: 12, scale: 3
+    t.boolean  "active"
+    t.string   "image"
     t.text     "description"
-    t.string   "code"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.string   "image_url"
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
   end
-
-  add_index "products", ["bundle_id"], name: "index_products_on_bundle_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
@@ -48,4 +56,6 @@ ActiveRecord::Schema.define(version: 20150922013825) do
     t.string   "last_name"
   end
 
+  add_foreign_key "order_items", "orders"
+  add_foreign_key "order_items", "products"
 end

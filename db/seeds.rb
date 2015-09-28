@@ -7,4 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-products = Product.create([{title: 'Shower bag', price: 20, description: 'Fashion axe biodiesel kogi, Odd Future flexitarian hoodie craft beer artisan drinking vinegar XOXO Shoreditch brunch actually. Tilde chia literally actually, viral cardigan farm-to-table +1 listicle Kickstarter blog. Art party asymmetrical distillery, drinking vinegar authentic fashion axe VHS'}, {title: 'Tequila', price: 5, description: 'Fashion axe biodiesel kogi, Odd Future flexitarian hoodie craft beer artisan drinking vinegar XOXO Shoreditch brunch actually. Tilde chia literally actually, viral cardigan farm-to-table +1 listicle Kickstarter blog. Art party asymmetrical distillery, drinking vinegar authentic fashion axe VHS'}])
+Product.delete_all
+Product.create! id: 1, name: "Banana", price: 0.49, active: true
+Product.create! id: 2, name: "Apple", price: 0.29, active: true
+Product.create! id: 3, name: "Carton of Strawberries", price: 1.99, active: true

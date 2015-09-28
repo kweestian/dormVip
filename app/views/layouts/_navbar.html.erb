@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <%= link_to image_tag("dormVipLogoColor.png", class: "navbar__image"), "#page-top"%>
+        <%= link_to image_tag("dormVipLogoColor.png", class: "navbar__image"), "/"%>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -16,7 +16,7 @@
         <div class="navbar-right">
           <ul class="nav navbar-nav">
             <li>
-                <a class="page-scroll" id="navbar__link" href="#services">Products</a>
+                <a class="page-scroll" id="navbar__link" href="products/index">Products</a>
             </li>
             <li>
                 <a class="page-scroll" id="navbar__link" href="users/new">Sign Up</a>
@@ -28,6 +28,7 @@
             <a href="https://www.instagram.com/dormvip"> <%= fa_icon "instagram 2x", class: "wow bounceIn top-logo" %> </a>
             <a href="https://www.facebook.com/dormvip"> <%= fa_icon "facebook-official 2x", class: "wow bounceIn top-logo" %> </a>
           </div>
+          <%= render "layouts/cart_text" %>
         </div>
 
       </div>
