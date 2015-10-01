@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
-  validates :email, uniqueness: { case_sensitive: false,
-    message: "This email is already registered!"}
+  has_secure_password
+  validates :email, uniqueness: { case_sensitive: false, message: "This email is already registered!"}
+  validates :password, presence: true, length: { minimum: 6 }
 end
