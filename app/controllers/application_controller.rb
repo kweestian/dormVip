@@ -6,10 +6,14 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   def current_order
-    if !session[:order_id].nil?
-      Order.find(session[:order_id])
+    if current_user && !current_user.order_id.nil?
+      if !session[:order_id].nil?
+        Order.where(user_id: current_user[:id], id: session[:order_id])
+      else
+        current_user.orders.new
+      end
     else
-      Order.new
+      current_user.orders.new
     end
   end
 end
