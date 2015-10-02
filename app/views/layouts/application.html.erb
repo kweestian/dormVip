@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 
 <head>
 
@@ -10,18 +9,16 @@
     <%= csrf_meta_tags %>
     <%= favicon_link_tag %>
 
-
-
-
-
 </head>
-<body id="page-top" >
+
+<body>
   <%= render partial: "layouts/navbar" %>
 
+  <div class="color-success successful-email"><%= notice %></div>
   <%= yield %>
+
 </body>
 
 <footer>
-    <%= javascript_include_tag 'application' %>
-    <%= render partial: "layouts/footer" %>
+  <%= javascript_include_tag 'application' %>
 </footer>
