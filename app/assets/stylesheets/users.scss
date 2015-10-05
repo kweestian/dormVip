@@ -6,6 +6,10 @@
   text-align: center;
   color: white;
 }
+.edit-user-form {
+  text-align: center;
+  margin-top: 200px;
+}
 
 .user-image-background {
   height: 100%;
@@ -16,11 +20,15 @@
   background-size: cover;
 }
 .user__form--low {
+<<<<<<< HEAD
   margin-top: 100px
+=======
+  margin-top: 150px
+>>>>>>> develop
 }
 
 .user__button {
-  height: 115%;
+  height: 109%;
 }
 
 #top-field {

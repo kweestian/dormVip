@@ -1,35 +1,50 @@
-<div class="container-full ">
-  <div class="row">
+<div class="user-form">
+  <div class="container-full ">
+    <div class="row">
 
-    <div class="col-lg-12 text-center v-center">
-    <%= form_for(@user) do |f|%>
-      <% if @user.errors.any? %>
-        <div class="error-box">
-          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <div class="col-lg-12 text-center v-center">
+      <%= form_for(@user) do |f|%>
+        <% if @user.errors.any? %>
+          <div class="error-box">
+            <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-          <% @user.errors.full_messages.each do |message| %>
-            <%= message %>
-          <% end %>
+            <% @user.errors.full_messages.each do |message| %>
+              <%= message %>
+            <% end %>
 
-        </div>
-      <% end %>
+          </div>
+        <% end %>
 
 
-          <h1 class="user__form--low">Talk Soon</h1>
-          <p class="lead">Enter for a chance to win free laundry for a year</p>
 
-          <br><br><br>
 
-          <div class="col-lg-12">
-            <div class="input-group" style="width:340px;text-align:center;margin:0 auto;">
-              <%= f.text_field :first_name, class: "form-control input-lg", placeholder: "First Name", id: "top-field" %>
-              <%= f.text_field :last_name, class: "form-control input-lg", placeholder: "Last Name" %>
-              <%= f.text_field :email, class: "form-control input-lg", placeholder: "Enter your email address", id: "bottom-field" %>
+            <div class="col-lg-12">
+              <div class="input-group" style="width:340px;text-align:center;margin:0 auto;">
+                <%= f.text_field :first_name, class: "form-control input-lg", placeholder: "First Name", id: "top-field" %>
+
+                <%= f.text_field :last_name, class: "form-control input-lg", placeholder: "Last Name" %>
+
+                <%= f.text_field :email, class: "form-control input-lg", placeholder: "Email" %>
+
+                <%= f.password_field :password, class: "form-control input-lg", placeholder: "password (min 6 char.)" %>
+
+                <%= f.password_field :password_confirmation, class: "form-control input-lg", placeholder: "confirm password", id: "bottom-field" %>
                 <span class="input-group-btn"><%= f.submit "ok", class: "btn btn-lg btn-primary user__button" %> </span>
+              </div>
             </div>
           </div>
+
+        </div> <!-- /row -->
+
+    	  <div class="row">
+
+          <div class="col-lg-12 text-center v-center" style="font-size:39pt;">
+            <a href="#"><i class="icon-google-plus"></i></a> <a href="#"><i class="icon-facebook"></i></a>  <a href="#"><i class="icon-twitter"></i></a> <a href="#"><i class="icon-github"></i></a> <a href="#"><i class="icon-pinterest"></i></a>
+          </div>
+
         </div>
 
-      </div> <!-- /row -->
-  <% end %>
-</div> <!-- /container full -->
+    	<br><br><br><br><br>
+    <% end %>
+  </div> <!-- /container full -->
+</div>

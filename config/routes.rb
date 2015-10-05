@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+
+
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
+
   get 'order_items/create'
 
   get 'order_items/update'
@@ -13,6 +19,7 @@ Rails.application.routes.draw do
   resources :products, only: [:index]
   resource :cart, only: [:show]
   resources :order_items, only: [:create, :update, :destroy]
+  resource :orders
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
