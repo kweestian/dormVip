@@ -5,15 +5,15 @@ class ApplicationController < ActionController::Base
   helper_method :current_order
   include SessionsHelper
 
-  def current_order
-    if current_user && !current_user.order_id.nil?
-      if !session[:order_id].nil?
-        Order.where(user_id: current_user[:id], id: session[:order_id])
-      else
-        current_user.orders.new
-      end
-    else
-      current_user.orders.new
-    end
-  end
+  # def current_order
+  #   if current_user && !current_user.order_id.nil?
+  #     if !session[:order_id].nil?
+  #       Order.where(user_id: current_user[:id], id: session[:order_id])
+  #     else
+  #       current_user.orders.new
+  #     end
+  #   else
+  #     current_user.orders.new
+  #   end
+  # end
 end
