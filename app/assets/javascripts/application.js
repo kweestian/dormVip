@@ -13,7 +13,6 @@
 //= require js/wow.min
 //= require js/jquery
 //= require jquery_ujs
-//= require angular/angular
 //= require_tree .
 //= require js/bootstrap.min
 //= require js/jquery.easing.min
@@ -21,4 +20,3 @@
 //= require js/jquery.fittext
 //= require js/cbpAnimatedHeader
 //= require js/creative
-

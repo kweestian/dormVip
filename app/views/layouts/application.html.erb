@@ -19,9 +19,13 @@
   <%= render partial: "layouts/navbar" %>
 
   <%= yield %>
+
+
+
+
 </body>
 
-<footer>
-    <%= javascript_include_tag 'application' %>
-    <%= render partial: "layouts/footer" %>
+<footer class="navbar-fixed-bottom">
+  <%= javascript_include_tag 'application' %>
+  <%= render partial: "layouts/footer" %>
 </footer>
