@@ -1,0 +1,17 @@
+<div class="field">
+  <%= form_for @order do |f| %>
+  <%= f.label :type %><br>
+  <%= f.text_field :frequency %>
+ </div>
+ 
+ <h2>Room Categories</h2>
+  <%= f.fields_for :order_items do |order_item| %>
+  <div class="order_item_fields">
+  <div class="field">
+  <%= order_item.label :name %><br>
+  <%= order_item.text_field :name %>
+  <%= order_item.number_field :quantity, value: 0, class: "form-control" %><br>
+  <%= order_item.label :name %><br>
+  </div>
+  </div>
+<% end %>
