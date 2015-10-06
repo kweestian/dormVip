@@ -1,7 +1,7 @@
 <div class="user-form user__form--low">
   <div class="field">
     <%= form_for @order do |f| %>
-      <%= f.select(:frequency, @frequencies) %><br>
+      <%= f.select(:frequency, @frequencies, :selected => @asked_frequency) %><br>
 
       <%= f.select(:first_item, Product.all.collect {|u| u.name}) %><br/ >
       <%= f.select(:second_item, Product.all.collect {|u| u.name}) %><br/ >

@@ -71,60 +71,79 @@
     <aside class="bg-dark">
       <div class="container text-center">
         <div class="row">
-          <div class="col-md-4 ">
+          <div class="col-md-3 ">
             <div class="price-box__header">
-              Monthly
+              Just Once
             </div>
             <div class="price-box__body-price">
-              $00.00
+              $24.99
             </div>
             <div class="price-box__body-item">
               Laundry + 3 items
             </div>
             <div class="price-box__body-frequency">
-              Frequency
+              Comes Every week
             </div>
             <div class="price-box__call-to-action">
               <div class="btn btn-default btn-xl wow tada">
-                I Want !
+                <%= link_to "Get NOW!", {:controller => "orders", :action => "new", :asked_frequency => "Once" } %>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="price-box__header">
-              Semester
+              For a Month
             </div>
             <div class="price-box__body-price">
-              $00.00
+              $22.99/week
             </div>
             <div class="price-box__body-item">
               Laundry + 3 items
             </div>
             <div class="price-box__body-frequency">
-            Frequency
+            Comes every week
             </div>
             <div class="price-box__call-to-action">
               <div class="btn btn-default btn-xl wow tada">
-                I Want !
+                <%= link_to "Get NOW!", {:controller => "orders", :action => "new", :asked_frequency => "For a Month" } %>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="price-box__header">
-              Yearly
+              For A Semester
             </div>
             <div class="price-box__body-price">
-              $00.00
+              $18.95/week
             </div>
             <div class="price-box__body-item">
               Laundry + 3 items
             </div>
             <div class="price-box__body-frequency">
-              Frequency
+              Comes every week
             </div>
             <div class="price-box__call-to-action">
               <div class="btn btn-default btn-xl wow tada">
-                I Want !
+                <%= link_to "Get NOW!", {:controller => "orders", :action => "new", :asked_frequency => "Semester" } %>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="price-box__header">
+              For A Year
+            </div>
+            <div class="price-box__body-price">
+              $14.95/week
+            </div>
+            <div class="price-box__body-item">
+              Laundry + 3 items
+            </div>
+            <div class="price-box__body-frequency">
+              Comes every week
+            </div>
+            <div class="price-box__call-to-action">
+              <div class="btn btn-default btn-xl wow tada">
+                <%= link_to "Get NOW!", {:controller => "orders", :action => "new", :asked_frequency => "For a Year" } %>
               </div>
             </div>
           </div>
