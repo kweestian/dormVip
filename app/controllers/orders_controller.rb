@@ -3,18 +3,19 @@ class OrdersController < ApplicationController
 
   def new
     @order = Order.new
-    @frequencies = ["Weekly", "Montly", "Yearly"]
+    @asked_frequency = params[:asked_frequency]
+    @frequencies = ["Once", "For a Month", "Semester",  "For a Year"]
   end
 
   def edit
   end
 
   def create
-    @order = current_user.orders.new(order_params)
+    @order = Order.new(order_params)
 
     respond_to do |format|
       if @order.save
-        format.html { redirect_to user_path(current_user) }
+        format.html { redirect_to '/', notice: 'Order was succesfully created! You Will receive an email shortly confirming' }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }
@@ -26,7 +27,7 @@ class OrdersController < ApplicationController
   def update
     respond_to do |format|
       if @order.update(order_params)
-        format.html { redirect_to @order, notice: 'User was successfully updated.' }
+        format.html { redirect_to @order, notice: 'Order was successfully updated.' }
         format.json { render :show, status: :ok, location: @order }
       else
         format.html { render :edit }
@@ -40,7 +41,7 @@ class OrdersController < ApplicationController
   def destroy
     @order.destroy
     respond_to do |format|
-      format.html { redirect_to orders_url, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
