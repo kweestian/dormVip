@@ -10,11 +10,11 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(order_params)
+    @order = current_user.orders.new(order_params)
 
     respond_to do |format|
       if @order.save
-        format.html { redirect_to '/', notice: "Welcome to DormVip #{@order.first_name}" }
+        format.html { redirect_to user_path(current_user) }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }
@@ -52,7 +52,7 @@ class OrdersController < ApplicationController
     end
 
   def order_params
-      params.require(:order).permit(:frequency, order_items_attributes: [ :id, :product_id])
+      params.require(:order).permit(:first_item, :second_item, :third_item, :user_id, :frequency, order_items_attributes: [ :id, :product_id])
   end
 
 end

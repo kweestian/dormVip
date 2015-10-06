@@ -1,14 +1,29 @@
-<p id="notice"><%= notice %></p>
+<div class="user-profile">
+  <p id="notice"><%= notice %></p>
+  <p>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+  <p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+  <%= link_to 'Edit', edit_user_path(@user) %> |
+  <%= link_to 'Back', users_path %>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+  <h4>Your Orders: </h4>
+
+  <% if @orders.any? %>
+    <% @orders.each do |order| %>
+      <%= order.frequency %> <br/ >
+      <%= order.first_item %> <br/ >
+      <%= order.second_item %> <br/ >
+      <%= order.third_item %> <br/ >
+    <% end %>
+  <% else %>
+    <%= link_to 'Create and Order!', new_order_path %>
+  <% end %>
+
+</div>
