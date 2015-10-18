@@ -13,7 +13,15 @@ body {
 }
 
 
+table, th, td {
+    border: 1px solid #f05f40;
+    table-layout: fixed;
+    width: 100%;
 
+    td {
+       word-wrap:break-word;
+    }
+}
 
 #header {
   background: url(image_path("DormVip-Vantage.png")) no-repeat center center fixed;
@@ -38,12 +46,12 @@ body {
   background-color: #333333;
 }
 
-.successful-email {
-  margin-top: 150px;
-  text-align: center;
-  background-color: green;
-  color: white;
-}
+// .successful-email {
+//   margin-top: 6%;
+//   text-align: center;
+//   background-color: green;
+//   color: white;
+// }
 
 .need-container__title {
   color: white;

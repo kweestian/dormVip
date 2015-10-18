@@ -12,8 +12,16 @@
 }
 
 .user-profile {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #f05f40;
   text-align: center;
-  margin-top: 150px;
+  max-width: 50%;
+  margin: 0 auto
+}
+
+.profile__info {
+  margin: 150px 0 auto;
+  padding: 48px;
 }
 
 .user-image-background {
@@ -30,6 +38,10 @@
 
 .user__button {
   height: 109%;
+}
+
+.user__button--edit {
+  height: 114%
 }
 
 #top-field {
