@@ -15,9 +15,18 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <div class="navbar-right">
           <ul class="nav navbar-nav">
-            <li>
-                <a class="page-scroll" id="navbar__link" href="/orders/new">Order Now </a>
-            </li>
+            <% if logged_in? %>
+              <li>
+                <%= link_to "Your Orders", user_path(current_user), class: "page-scroll", id: "navbar__link" %>
+              </li>
+              <li>
+                <%= link_to "Log out", '/logout', class: "page-scroll", id: "navbar__link" %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to "Log In", login_path, class: "page-scroll", id: "navbar__link" %>
+              </li>
+            <% end %>
             <li>
                 <a class="page-scroll" id="navbar__link" href="/users/new">Sign Up</a>
             </li>

@@ -1,29 +1,47 @@
 <div class="user-profile">
   <p id="notice"><%= notice %></p>
-  <p>
-    <strong>Name:</strong>
-    <%= @user.name %>
-  </p>
+<div class="profile__info">
+  <h4> This is the info we have on your account </h4>
+    <div class="col-sm-6">
+      <strong>Name:</strong>
+    </div>
+    <div class="col-sm-6">
+      <%= @user.name %>
+    </div>
+    <div class="col-sm-6">
+      <strong>Email:</strong>
+    </div>
+    <div class="col-sm-6">
+      <%= @user.email %>
+    </div>
+    <%= link_to 'Edit your account info', edit_user_path(@user), class: "white" %>
+  </div>
 
-  <p>
-    <strong>Email:</strong>
-    <%= @user.email %>
-  </p>
-
-  <%= link_to 'Edit', edit_user_path(@user) %> |
-  <%= link_to 'Back', users_path %>
-
-  <h4>Your Orders: </h4>
-
-  <% if @orders.any? %>
-    <% @orders.each do |order| %>
-      <%= order.frequency %> <br/ >
-      <%= order.first_item %> <br/ >
-      <%= order.second_item %> <br/ >
-      <%= order.third_item %> <br/ >
+<h4>Your Orders: </h4>
+<% if @orders.any? %>
+  <% @orders.each do |order| %>
+      <table>
+        <tr>
+          <th>Package Type</th>
+          <th>Items </th>
+          <th>Delivery Date</th>
+          <th>Delivery Address</th>
+          <th>Contact Phone Number</th>
+        </tr>
+        <tr>
+          <td>
+            <%= order.frequency %>
+          </td>
+          <td>
+            <div class="row"><%= order.first_item %></div>
+            <div class="row"><%= order.second_item %></div>
+            <div class="row"><%= order.third_item %></div>
+          </td>
+        </tr>
+      </table>
     <% end %>
   <% else %>
-    <%= link_to 'Create and Order!', new_order_path %>
+    <%= link_to 'No orders yet, Create one!', new_orders_path, class: "white" %>
   <% end %>
 
 </div>
