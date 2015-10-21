@@ -11,7 +11,15 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-
+.alert.alert-success {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  width: 50%;
+  margin: auto;
+  top: 100px;
+}
 
 table, th, td {
     border: 1px solid #f05f40;

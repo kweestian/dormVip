@@ -1,6 +1,9 @@
 class SessionsController < ApplicationController
 
   def new
+    if !params[:message].nil?
+      flash.now[:success] = params[:message]
+    end
   end
 
   def create
