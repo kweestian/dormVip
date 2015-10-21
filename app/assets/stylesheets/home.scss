@@ -69,11 +69,13 @@ table, th, td {
   width: 100%;
 }
 
-
+.price-box {
+  margin: 15px 0 15px 0;
+}
 
 .price-box__header {
   background-color: #f05f40;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 60px;
   border-top-left-radius: 36px;
   border-top-right-radius: 36px;
@@ -81,7 +83,7 @@ table, th, td {
 
 .price-box__body-price {
   background-color: #e74c3c;
-  font-size: 40px;
+  font-size: 25px;
   line-height: 80px;
 
 }
@@ -96,7 +98,7 @@ table, th, td {
 .price-box__body-frequency {
   background-color: #f5f7f7;
   color: #7f8c8d;
-  font-size: 25px;
+  font-size: 15px;
   line-height: 60px;
 
 }
