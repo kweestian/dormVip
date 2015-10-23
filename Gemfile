@@ -25,6 +25,8 @@ gem 'foreman'
 
 gem 'font-awesome-rails'
 
+gem 'bootstrap-select-rails'
+
 gem 'meta-tags'
 
 group :production do

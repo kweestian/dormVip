@@ -89,7 +89,7 @@
                 <% if current_user %>
                   <%= link_to "Get NOW!", new_orders_path %>
                 <% else %>
-                  <%= link_to "GET NOW", '/login' %>
+                  <%= link_to "GET NOW", {:controller => "sessions", :action => "new", :message => "Your seconds away from making an order, just sign in or create an account"} %>
                 <% end %>
               </div>
             </div>
@@ -112,7 +112,7 @@
                 <% if current_user %>
                   <%= link_to "Get NOW!", new_orders_path %>
                 <% else %>
-                  <%= link_to "GET NOW", '/login' %>
+                  <%= link_to "GET NOW", {:controller => "sessions", :action => "new", :message => "Your seconds away from making an order, just sign in or create an account"} %>
                 <% end %>
               </div>
             </div>
@@ -135,7 +135,7 @@
                 <% if current_user %>
                   <%= link_to "Get NOW!", new_orders_path %>
                 <% else %>
-                  <%= link_to "GET NOW", '/login' %>
+                  <%= link_to "GET NOW", {:controller => "sessions", :action => "new", :message => "Your seconds away from making an order, just sign in or create an account"} %>
                 <% end %>
               </div>
             </div>
