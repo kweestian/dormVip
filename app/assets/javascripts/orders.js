@@ -1,1 +1,3 @@
-// $('select').selectpicker();
+$('select').selectBoxIt({
+  theme: "jqueryui"
+});

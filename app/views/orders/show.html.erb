@@ -1,0 +1,21 @@
+<% if !@order.nil? %>
+  <table class="show-order-table">
+    <tr>
+      <th>Package Type</th>
+      <th>Items </th>
+      <th>Delivery Date</th>
+      <th>Delivery Address</th>
+      <th>Contact Phone Number</th>
+    </tr>
+    <tr>
+      <td class="show-order-table__padded-cell">
+        <%= @order.frequency %>
+      </td>
+      <td class="show-order-table__padded-cell">
+        <div><%= @order.first_item %></div>
+        <div><%= @order.second_item %></div>
+        <div><%= @order.third_item %></div>
+      </td>
+    </tr>
+  </table>
+<% end %>

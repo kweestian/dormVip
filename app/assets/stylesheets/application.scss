@@ -1,8 +1,11 @@
 @import "css/bootstrap.min";
 @import "css/animate.min";
+@import "selectBoxIt";
+@import "jquery-ui";
 @import "font-awesome";
 @import "css/creative";
 @import "variables.scss";
+@import "orders.scss";
 @import "home.scss";
 @import "scaffolds.scss";
 @import "navbar.scss";
@@ -10,4 +13,3 @@
 @import "products.scss";
 @import "carts";
 @import "sessions";
-@import "selectBoxIt";

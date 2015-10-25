@@ -87,7 +87,7 @@
             <div class="price-box__call-to-action">
               <div class="btn btn-default btn-xl wow tada">
                 <% if current_user %>
-                  <%= link_to "Get NOW!", new_orders_path %>
+                  <%= link_to "Get NOW!", new_user_order_path(current_user) %>
                 <% else %>
                   <%= link_to "GET NOW", {:controller => "sessions", :action => "new", :message => "Your seconds away from making an order, just sign in or create an account"} %>
                 <% end %>
@@ -110,7 +110,7 @@
             <div class="price-box__call-to-action">
               <div class="btn btn-default btn-xl wow tada">
                 <% if current_user %>
-                  <%= link_to "Get NOW!", new_orders_path %>
+                  <%= link_to "Get NOW!", new_user_order_path(current_user) %>
                 <% else %>
                   <%= link_to "GET NOW", {:controller => "sessions", :action => "new", :message => "Your seconds away from making an order, just sign in or create an account"} %>
                 <% end %>
@@ -133,7 +133,7 @@
             <div class="price-box__call-to-action">
               <div class="btn btn-default btn-xl wow tada">
                 <% if current_user %>
-                  <%= link_to "Get NOW!", new_orders_path %>
+                  <%= link_to "Get NOW!", new_user_order_path(current_user) %>
                 <% else %>
                   <%= link_to "GET NOW", {:controller => "sessions", :action => "new", :message => "Your seconds away from making an order, just sign in or create an account"} %>
                 <% end %>
@@ -156,7 +156,7 @@
             <div class="price-box__call-to-action">
               <div class="btn btn-default btn-xl wow tada">
                 <% if current_user  %>
-                  <%= link_to "Get NOW!", new_orders_path %>
+                  <%= link_to "Get NOW!", new_user_order_path(current_user) %>
                 <% else %>
                   <%= link_to "GET NOW", {:controller => "sessions", :action => "new", :message => "Your seconds away from making an order, just sign in or create an account"} %>
                 <% end %>

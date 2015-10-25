@@ -9,6 +9,10 @@ class OrdersController < ApplicationController
     @frequencies = ["Once", "For a Month", "Semester",  "For a Year"]
   end
 
+  def show
+    @order = current_user.orders.find(params[:id])
+  end
+
   def edit
   end
 
@@ -17,7 +21,7 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
-        format.html { redirect_to '/', notice: 'Order was succesfully created! You Will receive an email shortly confirming' }
+        format.html { redirect_to([@order.user, @order]) }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }

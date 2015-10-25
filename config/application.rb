@@ -22,7 +22,7 @@ module DormVip
     config.assets.paths << Rails.root.join("app", "vendor","assets","bower_components","fonts","bootstrap-sass-official")
 
     config.assets.precompile << %r(.*.(?:eot|svg|ttf|woff)$)
-    config.assets.initialize_on_precompile = false
+    config.assets.initialize_on_precompile = true
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
