@@ -28,7 +28,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to '/orders/new', notice: "Welcome to DormVip #{@user.first_name}" }
+        log_in @user
+        format.html { redirect_to new_user_order_path(@user), :notice => "Welcome to DormVip #{@user.first_name} customize your order!" }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }

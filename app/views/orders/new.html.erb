@@ -1,4 +1,12 @@
 <div class="user-form user__form--low">
+  <% flash.each do |name, msg| %>
+    <div class="alert alert-<%= name %>">
+      <a class="close" data-dismiss="alert">&#215</a>
+      <% if msg.is_a?(String) %>
+        <div id="flash_<%= name %>"> <%= sanitize(msg) %> </div>
+      <% end %>
+    </div>
+  <% end %>
   <div class="field">
     <%= form_for [@order.user, @order] do |f| %>
       <%= f.select(:frequency, @frequencies, :selected => @asked_frequency) %><br>
