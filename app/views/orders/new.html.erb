@@ -7,15 +7,24 @@
       <% end %>
     </div>
   <% end %>
-  <div class="field">
-    <%= form_for [@order.user, @order] do |f| %>
+    <%= form_for [@order.user, @order], html: {class: "form-horizontal", role: "form"} do |f| %>
       <%= f.select(:frequency, @frequencies, :selected => @asked_frequency) %><br>
 
       <%= f.select(:first_item, Product.all.collect {|u| u.name}, {class: 'selectBoxIt'}) %><br/ >
       <%= f.select(:second_item, Product.all.collect {|u| u.name}) %><br/ >
       <%= f.select(:third_item, Product.all.collect {|u| u.name}) %><br/ >
+
+      <div class="field">
+        <%= f.label :phone_number %>
+        <%= f.text_field :phone_number, placeholder: "In case we need to contact you" %> <br/ >
+      </div>
+
+      <div class="field">
+        <%= f.label :delivery_address %>
+        <%= f.text_field :delivery_address, placeholder: "Where do we deliver this?" %> <br/ >
+      </div>
+
       <%= f.submit "Proceed to Checkout", class: "btn btn-lg btn-primary" %>
 
     <% end %>
-  </div>
 </div>
