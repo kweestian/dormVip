@@ -20,4 +20,4 @@
 //= require js/jquery.fittext
 //= require js/cbpAnimatedHeader
 //= require js/creative
-// = require bootstrap-select
+//= require selectBoxIt.min
