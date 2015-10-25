@@ -20,13 +20,14 @@
 <h4>Your Orders: </h4>
 <% if @orders.any? %>
   <% @orders.each do |order| %>
-      <table>
+      <table class="table table-striped" style="width: 90%; margin: 15px auto;">
         <tr>
           <th>Package Type</th>
           <th>Items </th>
           <th>Delivery Date</th>
           <th>Delivery Address</th>
           <th>Contact Phone Number</th>
+          <th>Status</th>
         </tr>
         <tr>
           <td>
@@ -37,13 +38,31 @@
             <div class="row"><%= order.second_item %></div>
             <div class="row"><%= order.third_item %></div>
           </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+            Status
+          </td>
         </tr>
       </table>
+      <div class="btn">
+        Edit
+      </div>
+      <div class="btn">
+        Remove
+      </div>
+      <div class="btn">
+        Checkout
+      </div>
     <% end %>
   <% else %>
-    <%= link_to 'No orders yet, Create one!', new_orders_path, class: "white" %>
+    <%= link_to 'No orders yet, Create one!', new_user_order_path(current_user), class: "white" %>
   <% end %>
 
-  <%= link_to ' Create an Order!', new_orders_path, class: "white" %>
+  <%= link_to ' Create an Order!', new_user_order_path(current_user), class: "white" %>
 
 </div>
