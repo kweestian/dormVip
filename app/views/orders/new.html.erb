@@ -8,20 +8,27 @@
     </div>
   <% end %>
     <%= form_for [@order.user, @order], html: {class: "form-horizontal", role: "form"} do |f| %>
-      <%= f.select(:frequency, @frequencies, :selected => @asked_frequency) %><br>
-
-      <%= f.select(:first_item, Product.all.collect {|u| u.name}, {class: 'selectBoxIt'}) %><br/ >
-      <%= f.select(:second_item, Product.all.collect {|u| u.name}) %><br/ >
-      <%= f.select(:third_item, Product.all.collect {|u| u.name}) %><br/ >
-
-      <div class="field">
-        <%= f.label :phone_number %>
-        <%= f.text_field :phone_number, placeholder: "In case we need to contact you" %> <br/ >
+      <div class="form-group">
+        <%= f.select(:frequency, @frequencies, :selected => @asked_frequency) %>
+      </div>
+      <div class="form-group">
+        <%= f.select(:first_item, Product.all.collect {|u| u.name}, {class: 'selectBoxIt'}) %>
+      </div>
+      <div class="form-group">
+        <%= f.select(:second_item, Product.all.collect {|u| u.name}) %>
+      </div>
+      <div class="form-group">
+        <%= f.select(:third_item, Product.all.collect {|u| u.name}) %>
       </div>
 
-      <div class="field">
+      <div class="form-group">
+        <%= f.label :phone_number %>
+        <%= f.text_field :phone_number, placeholder: "(x)-xxx-xxx-xxxx", class: "order-form__input" %>
+      </div>
+
+      <div class="form-group">
         <%= f.label :delivery_address %>
-        <%= f.text_field :delivery_address, placeholder: "Where do we deliver this?" %> <br/ >
+        <%= f.text_field :delivery_address, placeholder: "e.g. ## Street, Prov/State, Country", class: "order-form__input" %> <br/ >
       </div>
 
       <%= f.submit "Proceed to Checkout", class: "btn btn-lg btn-primary" %>
