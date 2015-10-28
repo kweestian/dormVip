@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   get    'logout'  => 'sessions#destroy'
@@ -16,7 +17,9 @@ Rails.application.routes.draw do
   get 'products/index'
 
   resources :users do
-    resources :orders
+    resources :orders do
+      resources :checkouts
+    end
   end
 
   resources :products, only: [:index]

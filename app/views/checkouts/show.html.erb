@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @checkout.order_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @checkout.user_id %>
+</p>
+
+<p>
+  <strong>Paid:</strong>
+  <%= @checkout.paid %>
+</p>
+
+<%= link_to 'Edit', edit_checkout_path(@checkout) %> |
+<%= link_to 'Back', checkouts_path %>

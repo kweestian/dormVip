@@ -1,3 +1,11 @@
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -10,7 +18,7 @@ pre {
   font-size: 11px;
 }
 
-a i {
+a {
   color: #000;
 
   &:visited {
@@ -18,7 +26,8 @@ a i {
   }
 
   &:hover {
-    color: #f05f40;
+    color: #fff;
+    background-color: #000;
   }
 }
 

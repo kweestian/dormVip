@@ -13,6 +13,7 @@
 //= require js/wow.min
 //= require js/jquery
 //= require jquery-ui
+//= require js/payfirma.min
 //= require jquery_ujs
 //= require js/selectBoxIt
 //= require_tree .
