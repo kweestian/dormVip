@@ -12,9 +12,11 @@
         <%= @order.frequency %>
       </td>
       <td class="show-order-table__padded-cell">
-        <div><%= @order.first_item %></div>
-        <div><%= @order.second_item %></div>
-        <div><%= @order.third_item %></div>
+        <ul>
+          <li><%= @order.first_item %></li>
+          <li><%= @order.second_item %></li>
+          <li><%= @order.third_item %></li>
+        </ul>
       </td>
     </tr>
   </table>

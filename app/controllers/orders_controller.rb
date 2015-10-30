@@ -4,9 +4,14 @@ class OrdersController < ApplicationController
   # todo set up relations instead of nth_item
 
   def new
-    @order = current_user.orders.new
-    @asked_frequency = params[:asked_frequency]
     @frequencies = ["Once", "For a Month", "Semester",  "For a Year"]
+    @order = current_user.orders.new
+    if params[:asked_frequency].nil?
+      @asked_frequency = "Once"
+    else
+
+      @asked_frequency = params[:asked_frequency]
+    end
   end
 
   def show
@@ -33,7 +38,7 @@ class OrdersController < ApplicationController
   def update
     respond_to do |format|
       if @order.update(order_params)
-        format.html { redirect_to @order, notice: 'Order was successfully updated.' }
+        format.html { redirect_to user_order_path(current_user, @order), notice: 'Order was successfully updated.' }
         format.json { render :show, status: :ok, location: @order }
       else
         format.html { render :edit }
@@ -47,7 +52,7 @@ class OrdersController < ApplicationController
   def destroy
     @order.destroy
     respond_to do |format|
-      format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
+      format.html { redirect_to user_path(current_user), notice: 'Order was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -55,11 +60,11 @@ class OrdersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_order
-      @order = Order.where(user_id = current_user.id)
+      @frequencies = ["Once", "For a Month", "Semester",  "For a Year"]
+      @order = Order.find(params[:id])
     end
 
     def order_params
-
         params.require(:order).permit(:first_item, :second_item, :third_item, :user_id, :frequency, :phone_number, :delivery_time, :delivery_address, order_items_attributes: [ :id, :product_id])
     end
 

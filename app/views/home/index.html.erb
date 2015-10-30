@@ -6,7 +6,11 @@
 
                 <div class="header__tagline">Free. Your. Time.</div>
                 <p class="header__tagline-text"> Laundry and snacks hand-delivered to your door </p>
-                <a href="users/new" class="btn btn-default btn-xl"> Get Started! </a>
+                <% if logged_in? %>
+                  <%= link_to "Get Started!", new_user_order_path(current_user), class: "btn btn-default btn-xl" %>
+                <% else %>
+                  <a href="users/new" class="btn btn-default btn-xl"> Get Started! </a>
+                <% end %>
             </div>
         </div>
     </header>
