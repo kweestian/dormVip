@@ -6,6 +6,7 @@
       <th>Delivery Date</th>
       <th>Delivery Address</th>
       <th>Contact Phone Number</th>
+      <th>Order Status</th>
     </tr>
     <tr>
       <td class="show-order-table__padded-cell">
@@ -18,6 +19,23 @@
           <li><%= @order.third_item %></li>
         </ul>
       </td>
+      <td>
+        <%= @order.delivery_time %>
+      </td>
+      <td>
+        <%= @order.delivery_address %>
+      </td>
+      <td>
+        <%= @order.phone_number %>
+      </td>
+      <td>
+        <%= @order.paid_status %>
+      </td>
     </tr>
   </table>
+
+  <% if !@order.paid_status? %>
+    <%= link_to "Checkout", new_user_order_checkout_path(current_user, @order) %>
+  <% end %>
+
 <% end %>
