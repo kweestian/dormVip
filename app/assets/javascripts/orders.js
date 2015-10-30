@@ -1,3 +1,8 @@
-$('select').selectBoxIt({
-  theme: "jqueryui"
+
+$(document).ready(function() {
+
+  $('select').selectBoxIt({
+    theme: "jqueryui"
+  });
+
 });

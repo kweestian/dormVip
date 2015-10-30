@@ -50,10 +50,10 @@
         </tr>
       </table>
       <div class="btn">
-        Edit
+        <%= link_to "Edit", edit_user_order_path(@user, order), class: "btn" %>
       </div>
       <div class="btn">
-        Remove
+        <%= link_to 'Destroy',  user_order_path(@user, order), data: { confirm: 'Are you sure you want to delete this order?' }, method: :delete, class: "btn" %>
       </div>
       <div class="btn">
         Checkout

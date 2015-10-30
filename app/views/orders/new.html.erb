@@ -1,13 +1,37 @@
 <div class="user-form user__form--low">
-  <div class="field">
-    <%= form_for [@order.user, @order] do |f| %>
-      <%= f.select(:frequency, @frequencies, :selected => @asked_frequency) %><br>
+  <% flash.each do |name, msg| %>
+    <div class="alert alert-<%= name %>">
+      <a class="close" data-dismiss="alert">&#215</a>
+      <% if msg.is_a?(String) %>
+        <div id="flash_<%= name %>"> <%= sanitize(msg) %> </div>
+      <% end %>
+    </div>
+  <% end %>
+    <%= form_for [@order.user, @order], html: {class: "form-horizontal", role: "form"} do |f| %>
+      <div class="form-group">
+        <%= f.select(:frequency, @frequencies, :selected => @asked_frequency) %>
+      </div>
+      <div class="form-group">
+        <%= f.select(:first_item, Product.all.collect {|u| u.name}, {class: 'selectBoxIt'}) %>
+      </div>
+      <div class="form-group">
+        <%= f.select(:second_item, Product.all.collect {|u| u.name}) %>
+      </div>
+      <div class="form-group">
+        <%= f.select(:third_item, Product.all.collect {|u| u.name}) %>
+      </div>
 
-      <%= f.select(:first_item, Product.all.collect {|u| u.name}, {class: 'selectBoxIt'}) %><br/ >
-      <%= f.select(:second_item, Product.all.collect {|u| u.name}) %><br/ >
-      <%= f.select(:third_item, Product.all.collect {|u| u.name}) %><br/ >
+      <div class="form-group">
+        <%= f.label :phone_number %>
+        <%= f.text_field :phone_number, placeholder: "(x)-xxx-xxx-xxxx", class: "order-form__input" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :delivery_address %>
+        <%= f.text_field :delivery_address, placeholder: "e.g. ## Street, Prov/State, Country", class: "order-form__input" %> <br/ >
+      </div>
+
       <%= f.submit "Proceed to Checkout", class: "btn btn-lg btn-primary" %>
 
     <% end %>
-  </div>
 </div>
