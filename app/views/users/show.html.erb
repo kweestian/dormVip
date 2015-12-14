@@ -56,13 +56,18 @@
         <%= link_to 'Destroy',  user_order_path(@user, order), data: { confirm: 'Are you sure you want to delete this order?' }, method: :delete, class: "btn" %>
       </div>
       <div class="btn">
-        Checkout
+        <% if !order.paid_status? %>
+          <%= link_to "Checkout", new_user_order_checkout_path(@user, order) %>
+        <% end %>
       </div>
     <% end %>
   <% else %>
     <%= link_to 'No orders yet, Create one!', new_user_order_path(current_user), class: "white" %>
   <% end %>
 
-  <%= link_to ' Create an Order!', new_user_order_path(current_user), class: "white" %>
+  <br />
+  <div class="btn btn-xl create-order__btn">
+    <%= link_to ' Create an Order!', new_user_order_path(current_user), class: "white" %>
+  </div>
 
 </div>

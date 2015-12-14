@@ -35,7 +35,7 @@
   </table>
 
   <% if !@order.paid_status? %>
-    <%= link_to "Checkout", new_user_order_checkout_path(current_user, @order) %>
+    <%= link_to "Pay Order", new_user_order_checkout_path(current_user, @order), class: "btn btn-xl middle" %>
   <% end %>
 
 <% end %>

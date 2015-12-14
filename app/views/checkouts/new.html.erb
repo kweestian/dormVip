@@ -1,5 +1,72 @@
-<div class="user-form user__form--low">
-  <h1>Checkout</h1>
-
-  <%= link_to 'Back', '/' %>
+<div class="container user-form user__form--low">
+  <h2>Vertical (basic) form</h2>
+  <form role="form">
+    <div class="form-group">
+      <label for="name">Card Number:</label>
+      <input type="name" name="card_number" class="form-control" id="card_number" placeholder="xxxx-xxxx-xxxx-xxxx">
+    </div>
+    <div class="form-group">
+      <label for="card_expiry_month">Expiry Month</label>
+      <select name="card_expiry_month">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+      <label for="card_expiry_year">Expiry Year</label>
+      <select name="card_expiry_year">
+        <script>
+          var myDate = new Date();
+          var year = myDate.getFullYear();
+          for(var i = year; i < year+100; i++){
+        	  document.write('<option value="'+i+'">'+i+'</option>');
+          }
+          </script>
+      </select>
+      <label for="name">CVV</label>
+      <input type="name" name="cvv2" placeholder="xxx">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
 </div>
+
+<script>
+  function callback(response) {
+  		console.log(response);
+  	};
+
+  document.querySelector('button').onclick = function(e) {
+
+  	var doc = document;
+
+
+
+  	var card_number = doc.querySelector('input[name="card_number"]').value;
+  	var card_expiry_month = doc.querySelector('input[name="card_expiry_month"]').value;
+  	var card_expiry_year = doc.querySelector('input[name="card_expiry_year"]').value;
+  	var cvv2 = doc.querySelector('input[name="cvv2"]').value;
+
+  	var first_name = doc.querySelector('input[name="first_name"]').value;
+  	var last_name = doc.querySelector('input[name="last_name"]').value;
+
+  	var key = "<%= ENV["PAYFIRMA_API_KEY"] %>";
+  	var z = new Payfirma(key, {
+  		'card_number': card_number,
+  		'card_expiry_month': card_expiry_month,
+  		'card_expiry_year':  card_expiry_year,
+  		'cvv2': cvv2
+  	}, {
+  		'first_name': first_name,
+  		'last_name': last_name
+  	}, 'https://www.YOUWEBSITEADDRESS.com/refund.php', callback);
+
+  };
+</script>
